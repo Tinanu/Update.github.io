@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更新日志</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        th, td {
+            padding: 5px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 17px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .version {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        .update-date {
+            font-style: italic;
+            color: #777;
+        }
+        .highlight {
+            background-color: #e8f5e9;
+            font-weight: bold;
+            border: 2px solid #4CAF50;
+        }
+        .highlight .version {
+            color: #ff5722;
+        }
+        .highlight .update-date {
+            color: #ff5722;
+        }
+        .highlight ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .highlight ul li {
+            position: relative;
+            padding-left: 20px;
+        }
+        .highlight ul li::before {
+            content: "🌟";
+            left: 0;
+            color: #ff5722;
+        }
+        ul {
+            margin: 8px 0;
+        }
+        li {
+            margin: 6px 0;
+            font-size: 21px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>更新日志</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>版本号</th>
+                <th>更新时间</th>
+                <th>更新内容</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="version">v1.2.5</td>
+                <td class="update-date">2024-03-03</td>
+                <td>
+                    <ul>
+                        <li>修复了商品金额大于10000时显示异常的bug</li>
+                        <li>过滤关键词增加显示触发的关键词</li>
+                        <li>增加轮训模式，用于越过限制60秒内钉钉只能发送20条，使用该模式添加多个地址即可</li>
+                        <li>增加对标模式，用于划分每个群的通知分类，如苹果手机、安卓手机分为两个群通知</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="version">v1.2.6</td>
+                <td class="update-date">2024-03-03</td>
+                <td>
+                    <ul>
+                        <li>修复部分商品搜索不到，商品为0的情况，实际手动搜索能搜到，软件无法搜索到的问题</li>
+                        <li>增加过滤发布时间，只搜索N分钟内的商品</li>
+                        <li>增加列表选中商品双击可以打开商品，查看商品全部信息、图片等</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="version">v1.2.7</td>
+                <td class="update-date">2024-03-03</td>
+                <td>
+                    <ul>
+                        <li>修复bug，监控有商品数据，但是列表不显示的问题</li>
+                        <li>增加风控专区Bate，调整运行逻辑，测试风控情况</li>
+                        <li>倒狗小助手更新至v2.8.0</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="version">v1.2.8</td>
+                <td class="update-date">2024-03-04</td>
+                <td>
+                    <ul>
+                        <li>修复bug，关键词无效的问题</li>
+                        <li>修复bug，云电脑虚拟机设备码一直变的问题，已修复</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="version">v1.2.9</td>
+                <td class="update-date">2024-03-04</td>
+                <td>
+                    <ul>
+                        <li>修复bug，某些商品中途被删除，列表显示异常的问题</li>
+                        <li>新增添加滑动验证语音提示</li>
+                        <li>小助手更新至v2.9.0，无痕版，每次需要重新登录</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="highlight">
+                <td class="version">v1.3.0</td>
+                <td class="update-date">2024-03-04</td>
+                <td>
+                    <ul>
+                        <li>更新对接识别滑动验证平台，自动识别，无需手动滑动</li>
+                        <li>新增小助手更新v3.0.0，小助手登录对接自动滑动</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="version">v1.3.1</td>
+                <td class="update-date">2024-03-05</td>
+                <td>
+                    <ul>
+                        <li>优化 小助手滑动验证 相关优化</li>
+                        <li>优化 关闭小助手时 自动关闭指纹浏览器 并删除指纹浏览器
+                        <li>新增 闲鱼上新监控- 登录时可设置固定账号密码 软件自动输入
