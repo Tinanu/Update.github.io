@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +13,12 @@
             margin: 0;
             padding: 20px;
         }
+
         h1 {
             text-align: center;
             color: #4CAF50;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -23,64 +26,123 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             background-color: #fff;
         }
-        th, td {
+
+        th,
+        td {
             padding: 5px 15px;
             text-align: left;
             border-bottom: 1px solid #ddd;
             font-size: 17px;
         }
+
         th {
             background-color: #4CAF50;
             color: white;
             font-weight: bold;
         }
+
         tr:hover {
             background-color: #f1f1f1;
         }
+
         .version {
             font-weight: bold;
             color: #4CAF50;
         }
+
         .update-date {
             font-style: italic;
             color: #777;
         }
+
         .highlight {
             background-color: #e8f5e9;
             font-weight: bold;
             border: 2px solid #4CAF50;
         }
+
         .highlight .version {
             color: #ff5722;
         }
+
         .highlight .update-date {
             color: #ff5722;
         }
+
         .highlight ul {
             list-style-type: none;
             padding-left: 0;
         }
+
         .highlight ul li {
             position: relative;
             padding-left: 20px;
         }
+
         .highlight ul li::before {
             content: "🌟";
             left: 0;
             color: #ff5722;
         }
+
         ul {
             margin: 8px 0;
         }
+
         li {
             margin: 6px 0;
             font-size: 21px;
         }
+
+        .tutorials-section {
+        margin: 30px 0;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .tutorials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .tutorial-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 20px;
+        font-size: 16px;
+        color: white;
+        background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+        border-radius: 8px;
+        text-decoration: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    .tutorial-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%);
+    }
     </style>
 </head>
+
 <body>
 
     <h1>更新日志</h1>
+
+    <!-- 教程链接 -->
+    <!-- 教程链接区域 -->
+    <div class="tutorials-section">
+        <h2>相关教程</h2>
+        <div class="tutorials-grid">
+            <a class="tutorial-link" href="wx.html">查看微信通知教程</a>
+            <!-- 后续可以添加更多教程链接 -->
+            <!-- <a class="tutorial-link" href="other-tutorial.html">其他教程</a> -->
+        </div>
+    </div>
+
 
     <table>
         <thead>
@@ -168,12 +230,13 @@
                     </ul>
                 </td>
             </tr>
+
+
             <tr class="highlight">
                 <td class="version">v1.3.2</td>
                 <td class="update-date">2024-03-06</td>
                 <td>
                     <ul>
-                        <li>更新 倒狗小助手升级至v3.3.0 滑动验证更稳定</li>
                         <li>优化小助手 指纹浏览器 自动更换指纹浏览器</li>
                         <li>优化小助手 优化下单自动滑动的成功率</li>
                         <li>优化小助手 开始运行服务 检测账号密码是否错误 并显示余额</li>
@@ -187,8 +250,26 @@
                     </ul>
                 </td>
             </tr>
+
+
+   
+                <td class="version">v1.3.4</td>
+                <td class="update-date">2024-03-08</td>
+                <td>
+                    <ul>
+                        <li>新增 钉钉消息推送样式 支持勾选旧版样式</li>
+                        <li>新增 拉黑商家 从此后搜索不会展示此商家的商品  使用方法:监控列表鼠标右键</li>
+                        <li>新增 监控列表 鼠标右键 清空列表</li>
+                        <li>主程序更新多商品监控 增加是否需要自动拍下的开关</li>
+                        <li>新增 手动过滑动工具 提供给用户手动过滑动的工具</li>
+                        <li>新增 滑动验证可设置微信通知 设置设备编号 通知到微信</li>
+                    </ul>
+                </td>
+            
+
         </tbody>
     </table>
 
 </body>
+
 </html>
