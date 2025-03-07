@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闲鱼程序关注与TOKEN获取</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(135deg, #f0f4f8 0%, #dfe9f3 100%);
+        min-height: 100vh;
+    }
+        .container {
+            margin: 20px auto;
+            max-width: 600px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        .qrcode-container {
+            margin: 20px auto;
+            max-width: 300px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .qrcode-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .instructions {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #495057;
+            line-height: 1.6;
+        }
+        .token-image {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 16px;
+            color: white;
+            background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,123,255,0.2);
+        }
+        .link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,123,255,0.3);
+            text-decoration: none;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #ffffff;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 关注闲鱼程序部分 -->
+        <div class="section">
+            <h1>关注闲鱼程序</h1>
+            <div class="qrcode-container">
+                <img src="https://wxpusher.zjiecode.com/api/qrcode/bRy87ed1eUBjY6IkxbzpcgHa57qk7vQLUW5fGdIxeCTG8Tsdhp6WpQCyOTOOUHWJ.jpg" alt="闲鱼程序二维码">
+            </div>
+            <div class="instructions">
+                <p>请使用微信扫描上方二维码关注我们的应用。</p>
+                <p>扫描后，您将能够接收来自应用的消息。</p>
+            </div>
+        </div>
+
+        <!-- 获取TOKEN部分 -->
+        <div class="section">
+            <h1>获取TOKEN</h1>
+            <div class="instructions">
+                <p>请点击下方链接，打开地址扫码获取TOKEN：</p>
+                <a class="link" href="https://wxpusher.zjiecode.com/demo/" target="_blank">点我打开地址扫码获取TOKEN</a>
+            </div>
+            <div class="instructions">
+                <p>以下是TOKEN的示例图片，请参考：</p>
+                <img class="token-image" src="pic.png" alt="TOKEN示例图片">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
