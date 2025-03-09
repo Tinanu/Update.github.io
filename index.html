@@ -95,36 +95,39 @@
         }
 
         .tutorials-section {
-        margin: 30px 0;
-        padding: 20px;
-        background: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .tutorials-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        margin-top: 20px;
-    }
-    .tutorial-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 15px 20px;
-        font-size: 16px;
-        color: white;
-        background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-        border-radius: 8px;
-        text-decoration: none;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
-    .tutorial-link:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%);
-    }
+            margin: 30px 0;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .tutorials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .tutorial-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 20px;
+            font-size: 16px;
+            color: white;
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .tutorial-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%);
+        }
     </style>
 </head>
 
@@ -138,6 +141,9 @@
         <h2>相关教程</h2>
         <div class="tutorials-grid">
             <a class="tutorial-link" href="wx.html">查看微信通知教程</a>
+            <a class="tutorial-link" href="https://www.123912.com/s/6alQjv-48Ovd">前往查看视频教程</a>
+            <a class="tutorial-link" href="https://www.123912.com/s/6alQjv-48Ovd">前往下载1.3.5谷歌内核版监控助手</a>
+  
             <!-- 后续可以添加更多教程链接 -->
             <!-- <a class="tutorial-link" href="other-tutorial.html">其他教程</a> -->
         </div>
@@ -252,19 +258,36 @@
             </tr>
 
 
-   
-                <td class="version">v1.3.4</td>
-                <td class="update-date">2024-03-08</td>
+
+            <td class="version">v1.3.4 edge分支</td>
+            <td class="update-date">2024-03-08</td>
+            <td>
+                <ul>
+                    <li>新增 钉钉消息推送样式 支持勾选旧版样式</li>
+                    <li>新增 拉黑商家 从此后搜索不会展示此商家的商品 使用方法:监控列表鼠标右键</li>
+                    <li>新增 监控列表 鼠标右键 清空列表</li>
+                    <li>新增 手动过滑动工具 提供给用户手动过滑动的工具</li>
+                    <li>新增 滑动验证可设置微信通知 设置设备编号 通知到微信</li>
+                </ul>
+            </td>
+
+            <tr class="highlight">
+                <td class="version">v2.0.0 Chrome分支</td>
+                <td class="update-date">2024-03-06</td>
                 <td>
                     <ul>
-                        <li>新增 钉钉消息推送样式 支持勾选旧版样式</li>
-                        <li>新增 拉黑商家 从此后搜索不会展示此商家的商品  使用方法:监控列表鼠标右键</li>
-                        <li>新增 监控列表 鼠标右键 清空列表</li>
-                        <li>新增 手动过滑动工具[小A助手] 提供给用户手动过滑动的工具 </li>
-                        <li>新增 滑动验证可设置微信通知 设置设备编号 通知到微信</li>
+                        <li>修复 微信通知 发送消息失败的问题</li>
+                        <li>修复 地区选择无效问题</li>
+                        <li>优化 小助手至 v3.4.0</li>
+                        <li>更改 新版Chrome 登录会下次登录无需重新扫码</li>
+                        <li>更改 监控助手主程序自带的浏览器 改为Chrome内核 整个文件需要重新下载</li>
                     </ul>
                 </td>
+            </tr>
+
+
             
+
 
         </tbody>
     </table>
