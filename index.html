@@ -85,6 +85,29 @@
             color: #ff5722;
         }
 
+
+        .highlightA {
+            background-color: #b68ab7;
+            font-weight: bold;
+            border: 2px solid skyblue;
+        }
+
+        .highlightA ul li::before {
+            content: "🌟";
+            left: 0;
+            color: orange;
+        }
+
+        .highlightA ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .highlightA ul li {
+            position: relative;
+            padding-left: 20px;
+        }
+
         ul {
             margin: 8px 0;
         }
@@ -271,6 +294,23 @@
                 </ul>
             </td>
 
+
+
+            <tr class="highlightA">
+                <td class="version">v1.3.7 edge分支</td>
+                <td class="update-date">2024-03-12</td>
+                <td>
+                    <ul>
+                        <li>新增 开始运行时自动检测账号是否登录状态</li>
+                        <li>新增 将配置文件迁移到运行目录的<配置文件>中</li>
+                        <li>新增 多账号登录 多账号轮训刷新 避免出现滑动验证</li>
+                        <li>优化 修复若干问题</li>
+                    </ul>
+                </td>
+            </tr>
+
+
+
             <tr class="highlight">
                 <td class="version">v2.0.0 Chrome分支</td>
                 <td class="update-date">2024-03-09</td>
@@ -285,9 +325,18 @@
                 </td>
             </tr>
 
-
-            
-
+            <tr class="highlightA">
+                <td class="version">v2.0.2 Chrome分支</td>
+                <td class="update-date">2024-03-12</td>
+                <td>
+                    <ul>
+                        <li>新增 开始运行时自动检测账号是否登录状态</li>
+                        <li>新增 将配置文件迁移到运行目录的<配置文件>中</li>
+                        <li>新增 多账号登录 多账号轮训刷新 避免出现滑动验证</li>
+                        <li>优化 修复若干问题</li>
+                    </ul>
+                </td>
+            </tr>
 
         </tbody>
     </table>
