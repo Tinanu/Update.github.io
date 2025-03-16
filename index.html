@@ -158,6 +158,27 @@
 
     <h1>更新日志</h1>
 
+        <!-- 版本区别说明 -->
+        <div class="version-diff" style="background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);">
+            <h2 style="color: white; margin-top: 0; text-align: center; font-size: 28px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">版本区别说明</h2>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; padding: 0 20px;">
+                <div style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <h3 style="color: #4CAF50; margin: 0 0 15px; font-size: 22px;">上新监控普通版</h3>
+                    <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #eee; font-size: 18px; color: #555;">刷新过快 会出现滑动验证 推荐8s刷新频率</li>
+                        <li style="padding: 10px 0; font-size: 18px; color: #555;">轮训模式不支持钉钉强聊 因为过快会触发滑动</li>
+                    </ul>
+                </div>
+                <div style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <h3 style="color: #ff5722; margin: 0 0 15px; font-size: 22px;">上新监控Super版</h3>
+                    <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #eee; font-size: 18px; color: #555;">24小时0秒刷新 不会出现滑动验证</li>
+                        <li style="padding: 10px 0; font-size: 18px; color: #555;">轮训模式支持钉钉强聊 内部自动秒过滑动</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     <!-- 教程链接 -->
     <!-- 教程链接区域 -->
     <div class="tutorials-section">
@@ -347,6 +368,18 @@
                     <ul>
                         <li>新增 多商品多个 过滤关键词配置</li>
                         <li>新增 多商品多个 命中关键词配置</li>
+                    </ul>
+                </td>
+            </tr>
+
+
+            <tr class="highlight">
+                <td class="version">v2.0.6 Chrome and v1.4.1 Edge</td>
+
+                <td class="update-date">2024-03-16</td>
+                <td>
+                    <ul>
+                        <li>修复 个别商品钉钉通知遗漏</li>
                     </ul>
                 </td>
             </tr>
