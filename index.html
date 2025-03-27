@@ -102,7 +102,7 @@
             list-style-type: none;
             padding-left: 0;
         }
-        
+
         .highlightA ul li {
             position: relative;
             padding-left: 20px;
@@ -151,6 +151,119 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
             background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%);
         }
+
+        .version-diff {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .version-diff h2 {
+            color: white;
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .version-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .version-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .version-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .version-icon {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .version-card h3 {
+            color: #4CAF50;
+            margin: 0 0 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .version-card.super h3 {
+            color: #ff5722;
+        }
+
+        .version-card.shop h3 {
+            color: #2196F3;
+        }
+
+        .version-card ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .version-card li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .version-card li:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .version-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .version-card {
+                padding: 20px;
+            }
+        }
+
+        .version-card li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+            color: #555;
+            display: block;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* 使用更现代的字体 */
+            font-weight: 500;
+            /* 中等字重 */
+            line-height: 1.6;
+            /* 增加行高 */
+            letter-spacing: 0.5px;
+            /* 增加字间距 */
+            transition: all 0.3s ease;
+            /* 添加过渡效果 */
+        }
+
+        .version-card li:hover {
+            color: #4CAF50;
+            /* 鼠标悬停时改变颜色 */
+            transform: scale(1.02);
+            /* 轻微放大效果 */
+        }
     </style>
 </head>
 
@@ -158,28 +271,40 @@
 
     <h1>更新日志</h1>
 
-        <!-- 版本区别说明 -->
-        <div class="version-diff" style="background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);">
-            <h2 style="color: white; margin-top: 0; text-align: center; font-size: 28px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">版本区别说明</h2>
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; padding: 0 20px;">
-                <div style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    <h3 style="color: #4CAF50; margin: 0 0 15px; font-size: 22px;">上新监控普通版</h3>
-                    <ul style="list-style-type: none; padding-left: 0; margin: 0;">
-                        <li style="padding: 10px 0; border-bottom: 1px solid #eee; font-size: 18px; color: #555;">刷新过快 会出现滑动验证 推荐5s+刷新频率</li>
-                        <li style="padding: 10px 0; font-size: 18px; color: #555;">轮训模式不支持钉钉强聊 因为过快会触发滑动</li>
-                    </ul>
-                </div>
-                <div style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    <h3 style="color: #ff5722; margin: 0 0 15px; font-size: 22px;">上新监控Super版</h3>
-                    <ul style="list-style-type: none; padding-left: 0; margin: 0;">
-                        <li style="padding: 10px 0; border-bottom: 1px solid #eee; font-size: 18px; color: #555;">24小时0秒刷新 不会出现滑动验证</li>
-                        <li style="padding: 10px 0; font-size: 18px; color: #555;">轮训模式支持钉钉强聊 内部自动秒过滑动</li>
-                        <li style="padding: 10px 0; font-size: 18px; color: #555;">免除图灵打码滑块识别</li>
-                        <li style="padding: 10px 0; font-size: 18px; color: #555;">支持 7x24 保持登录状态</li>
-                    </ul>
-                </div>
+    <!-- 版本区别说明 -->
+    <div class="version-diff">
+        <h2>版本区别说明</h2>
+        <div class="version-grid">
+            <div class="version-card basic">
+                <div class="version-icon">📊</div>
+                <h3>上新监控普通版</h3>
+                <ul>
+                    <li>刷新过快 会出现滑动验证 推荐5s+刷新频率</li>
+                    <li>轮训模式不支持钉钉强聊 因为过快会触发滑动</li>
+                </ul>
+            </div>
+            <div class="version-card super">
+                <div class="version-icon">🚀</div>
+                <h3>上新监控Super版</h3>
+                <ul>
+                    <li>24小时0秒刷新 不会出现滑动验证</li>
+                    <li>轮训模式支持钉钉强聊 内部自动秒过滑动</li>
+                    <li>免除图灵打码滑块识别</li>
+                    <li>支持 7x24 保持登录状态</li>
+                </ul>
+            </div>
+            <div class="version-card shop">
+                <div class="version-icon">🏪</div>
+                <h3>指定店铺上新监控版</h3>
+                <ul>
+                    <li>免登录闲鱼 即可使用</li>
+                    <li>支持多店铺监控上新</li>
+                    <li>支持 7x24 长时间挂机</li>
+                    <li>支持0秒刷新频率 无滑动验证</li>
+                </ul>
             </div>
         </div>
+    </div>
 
     <!-- 教程链接 -->
     <!-- 教程链接区域 -->
@@ -188,8 +313,8 @@
         <div class="tutorials-grid">
             <a class="tutorial-link" href="wx.html">查看微信通知教程</a>
             <a class="tutorial-link" href="https://www.123912.com/s/6alQjv-48Ovd">前往查看视频教程</a>
-            <a class="tutorial-link" href="https://www.123912.com/s/6alQjv-48Ovd">前往下载v2.0.0 Chrome版监控助手</a>
-  
+            <a class="tutorial-link" href="https://www.123912.com/s/6alQjv-48Ovd">前往下载Chrome版监控助手</a>
+
             <!-- 后续可以添加更多教程链接 -->
             <!-- <a class="tutorial-link" href="other-tutorial.html">其他教程</a> -->
         </div>
@@ -402,7 +527,7 @@
                 </td>
             </tr>
 
-            
+
 
             <tr class="highlightA">
                 <td class="version">v2.1.0 Chrome and v1.4.6 Edge</td>
@@ -420,8 +545,8 @@
                 <td class="update-date">2025-03-19</td>
                 <td>
                     <ul>
-                        <li>1. 优化 多账号切换逻辑 运行更稳定 稳定10h+  参数:刷新频率10  账号数:2个</li>
-                        <li>2. 新增 在账号相关在新增 可以选中登录时是否删除前账号数据  默认删除 (默认更好)</li>
+                        <li>1. 优化 多账号切换逻辑 运行更稳定 稳定10h+ 参数:刷新频率10 账号数:2个</li>
+                        <li>2. 新增 在账号相关在新增 可以选中登录时是否删除前账号数据 默认删除 (默认更好)</li>
                     </ul>
                 </td>
             </tr>
@@ -459,7 +584,16 @@
                 </td>
             </tr>
 
+            <tr class="highlightA">
+                <td class="version">v2.1.6 Chrome and v1.5.1 Edge</td>
+                <td class="update-date">2025-03-27</td>
+                <td>
+                    <ul>
+                        <li>1. 优化钉钉样式 打开商品隐藏至文字中 点击文字即可打开商品页面</li>
 
+                    </ul>
+                </td>
+            </tr>
 
 
         </tbody>
