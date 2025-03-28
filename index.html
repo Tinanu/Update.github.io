@@ -244,18 +244,15 @@
             border-bottom: 1px solid #eee;
             font-size: 16px;
             color: #555;
-            display: block;
-            text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* 使用更现代的字体 */
-            font-weight: 500;
-            /* 中等字重 */
-            line-height: 1.6;
-            /* 增加行高 */
-            letter-spacing: 0.5px;
-            /* 增加字间距 */
-            transition: all 0.3s ease;
-            /* 添加过渡效果 */
+            display: flex;
+            align-items: center;
+            text-align: left;
+            min-width: 300px;
+            /* 设置最小宽度 */
+            justify-content: center;
+            /* 内容居中 */
+            margin: 0 auto;
+            /* 水平居中 */
         }
 
         .version-card li:hover {
@@ -263,6 +260,17 @@
             /* 鼠标悬停时改变颜色 */
             transform: scale(1.02);
             /* 轻微放大效果 */
+        }
+
+        .version-card li::before {
+            content: "✓";
+            color: #4CAF50;
+            font-size: 18px;
+            flex: 0 0 20px;
+            /* 固定宽度 */
+            text-align: center;
+            /* 图标居中 */
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -279,28 +287,29 @@
                 <div class="version-icon">📊</div>
                 <h3>上新监控普通版</h3>
                 <ul>
-                    <li>刷新过快 会出现滑动验证 推荐5s+刷新频率</li>
-                    <li>轮训模式不支持钉钉强聊 因为过快会触发滑动</li>
+                    <li>基础功能具备</li>
+                    <li>刷新频率6s及以上</li>
                 </ul>
             </div>
             <div class="version-card super">
                 <div class="version-icon">🚀</div>
                 <h3>上新监控Super版</h3>
                 <ul>
-                    <li>24小时0秒刷新 不会出现滑动验证</li>
-                    <li>轮训模式支持钉钉强聊 内部自动秒过滑动</li>
-                    <li>免除图灵打码滑块识别</li>
-                    <li>支持 7x24 保持登录状态</li>
+                    <li>0秒刷新频率，无滑动验证，监控更高效</li>
+                    <li>支持自动私信卖家功能，提升沟通效率</li>
+                    <li>轮训模式支持钉钉强聊，自动处理滑动验证</li>
+                    <li>支持7×24小时保持登录状态，无需重复登录</li>
                 </ul>
             </div>
             <div class="version-card shop">
                 <div class="version-icon">🏪</div>
                 <h3>指定店铺上新监控版</h3>
                 <ul>
-                    <li>免登录闲鱼 即可使用</li>
-                    <li>支持多店铺监控上新</li>
-                    <li>支持 7x24 长时间挂机</li>
-                    <li>支持0秒刷新频率 无滑动验证</li>
+                    <li>无需登录闲鱼账号，开箱即用</li>
+                    <li>0秒刷新频率，无滑动验证，监控更高效</li>
+                    <li>支持多店铺同时监控，上新信息实时获取</li>
+                    <li>支持7×24小时长时间挂机，稳定运行</li>
+                    
                 </ul>
             </div>
         </div>
